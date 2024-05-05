@@ -1,0 +1,17 @@
+ls - shows the content of the current directory.
+ls -a - shows the content of the current directory with all of the hidden files inside.
+ls -l - shows the content of the current directory with the premissions of all of the files inside.
+ls -h - shows the content of the current directory with the size of all of the files and the directories.
+ls -alh - shows the content of the current directory with all of the hidden files inside, and all of the premissions of all of the files in the directory and their size.
+pwd - shows the destination of the current directory.
+cd .. - will take you one directory back from the current directory.
+cd ~ - will take you to the home directory.
+cd ../.. - will take you two directories back from the current directory.
+cat test.txt | grep lior - will show the content of the file test.txt but will only show lines with the word lior.
+mkdir - creates a new directory.
+touch - creates a new file.
+man *command* - will show an explanation of a command, like a manual.
+*command* --help - will show a shorter explanation from man, for a command.
+cat *name of file* - prints the content of a file.
+sudo su - switches to the administrator user.
+exit - will exit the administrator user back to the last user.
