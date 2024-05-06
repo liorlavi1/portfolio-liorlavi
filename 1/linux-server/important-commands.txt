@@ -1,8 +1,11 @@
+General commands:
 ls - shows the content of the current directory.
 ls -a - shows the content of the current directory with all of the hidden files inside.
 ls -l - shows the content of the current directory with the premissions of all of the files inside.
 ls -h - shows the content of the current directory with the size of all of the files and the directories.
 ls -alh - shows the content of the current directory with all of the hidden files inside, and all of the premissions of all of the files in the directory and their size.
+ll - does the same as ls -alh.
+ll test* - will show information only on files that start with the name test on the current directory.
 pwd - shows the destination of the current directory.
 cd .. - will take you one directory back from the current directory.
 cd ~ - will take you to the home directory.
@@ -12,6 +15,21 @@ mkdir - creates a new directory.
 touch - creates a new file.
 man *command* - will show an explanation of a command, like a manual.
 *command* --help - will show a shorter explanation from man, for a command.
-cat *name of file* - prints the content of a file.
+cat *file name* - prints the content of a file.
 sudo su - switches to the administrator user.
 exit - will exit the administrator user back to the last user.
+which *command* - will show the origin of the location of the command.
+
+Users commands:
+useradd - creates a new user.
+adduser - easier command than useradd.
+passwd - creates/changes a password for a user.
+usermod - adds the user to a different group.
+cat /etc/group - shows all of the created accounts on the system and their associated groups.
+userdel - deletes a user
+deluser - has less options than userdel
+whoami - will show you which user you are currently signed in to.
+sudo su *name of user* - will switch you to the chosen account.
+groups - will show which groups the user is part of.
+usermod -L *name of user* - will lock the selected user.
+usermod -U *name of user* - will unlock the selected user.

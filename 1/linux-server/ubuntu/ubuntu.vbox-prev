@@ -6,14 +6,14 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.16-windows">
-  <Machine uuid="{f6fe0d58-eb29-4b18-a9fe-41f12e6b53e9}" name="ubuntu" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2024-05-05T12:36:04Z">
+  <Machine uuid="{f6fe0d58-eb29-4b18-a9fe-41f12e6b53e9}" name="ubuntu" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2024-05-06T13:56:54Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{ca71178a-2f59-4f2b-8e96-83d422eca060}" location="ubuntu.vdi" format="VDI" type="Normal"/>
       </HardDisks>
     </MediaRegistry>
     <ExtraData>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="960,424,640,531"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="1530,471,800,651"/>
     </ExtraData>
     <Hardware>
       <CPU>
@@ -47,7 +47,7 @@
       <RTC localOrUTC="UTC"/>
       <Clipboard/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1714910811631961300" flags="RDONLYGUEST"/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1714912564383223100" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>
