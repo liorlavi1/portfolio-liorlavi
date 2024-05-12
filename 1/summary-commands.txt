@@ -20,16 +20,24 @@ sudo su - switches to the administrator user.
 exit - will exit the administrator user back to the last user.
 which *command* - will show the origin of the location of the command.
 
-Users commands:
+Users commands (For examples, refer to the file "user-commands.txt" which found inside the folder "users"):
 useradd - creates a new user.
 adduser - easier command than useradd.
 passwd - creates/changes a password for a user.
 usermod - adds the user to a different group.
 cat /etc/group - shows all of the created accounts on the system and their associated groups.
-userdel - deletes a user
-deluser - has less options than userdel
+userdel - deletes a user.
+deluser - has less options than userdel.
 whoami - will show you which user you are currently signed in to.
 sudo su *name of user* - will switch you to the chosen account.
 groups - will show which groups the user is part of.
 usermod -L *name of user* - will lock the selected user.
 usermod -U *name of user* - will unlock the selected user.
+
+Groups commands (For examples, refer to the file "group-commands.txt" which found inside the folder "groups"):
+groups - will show which groups the current user belongs to
+groupadd *name* - will create a new group.
+usermod -a -G *name of group* *name of user* - will add the selected user to the selected group.
+chown -R *name of user*:*name of group* *path of directory* - will change the current ownership of the directory to the ownership of the selected user and also, this will make the selected group have ownership on the directory.
+chmod *u/g/o**+/-**r/w/x* *name of directory* - will add/remove premissions depends on what you pick for the chosen directory.
+chmod *0-7**0-7**0-7* *name of directory* - same as the command above but changes the premissions for all of the parameters of the chosen directory.
