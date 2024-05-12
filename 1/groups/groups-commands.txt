@@ -1,0 +1,44 @@
+Groups are important to prevent users from seeing specific files and folders that you don't want them to.
+Each user has a primary group and a secondary group. The primary group is the name of the user and the secondary group is the name of the group that the user is originated from.
+
+Here is an exmaple of an output from using the command "ll":
+
+drwxr-xr-x 4 lior lior 4096 Jan 29 18:15 ./
+drwxr-xr-x 5 root root 4096 Jan 29 17:28 ../
+
+As you can see, at the start of the line, there are combination of letters that will show you what premissions the file has.
+The first letter means if it's a directory or a file. If it's starts with d, it means it's a directory.
+the first 3 letters refers to the premissions of the owner of the directory, the 3 letters after that refers to the premissions of the group that belongs to the directory, and the last 3 letters refers to the premissions of anyone who does not belong to the group of the directory.
+
+r (read) - read the file
+w (write) - change or write inside the file
+x (execute) - execute the file
+
+If you want to add a user to a group, you can use the command usermod.
+Example of the command: usermod -a -G test lior
+This command will add the user "lior" to the group "test".
+Note that after adding a user to a group, you have to logout and login from the user for the group changes to apply.
+
+If you want to change the owner of the file or directory, you can use the command chown.
+Example of the command: sudo chown -R lior:test files/
+This command will change the current ownership of the directory "files" to the ownership of the user "lior" and also, this will make the group "test" have ownership on the directory.
+
+To change the premission on a file or a directory, you have to use the command chmod.
+Example of the command: sudo chmod g+w test/
+This command will add the write premission to the group premissions for the directory "test"
+Another example of the command: sudo chmod o-rwx test/
+This command will remove the premissions read, write, and execute from anyone who is not the owner of the directory and do not belong to the group of the directory.
+
+Alternatively, instead of writing manualy each premission, you can use a shortcut for changing the premissions for all of the parameters of the file by using numbers instead of letters in the command chmod.
+Here is an example: sudo chmod 777 test/
+This command will add all of the premissions to the owner, group, and anyone else to the directory "test". That is because that each letter of the premissions has a number attached to it.
+r is 4, w is 2 and x is 1. If you add up everything together, you get 7.
+The first number refers to the owner, the second number refers to the group, and the third number refers to anyone else.
+Here is another example: sudo chmod 650 test/
+This time, the owner will have read and write premissions only, the group will have read and execute only, and everyone else will not have any premissions.
+That is because r and w adds up to 6, and r and x adds up to 5.
+
+
+Important commands to know that are related to groups:
+groups - will show which groups the current user belongs to
+groupadd *name* - will create a new group
