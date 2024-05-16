@@ -20,6 +20,12 @@ sudo su - switches to the administrator user.
 exit - will exit the administrator user back to the last user.
 which *command* - will show the origin of the location of the command.
 
+Important commands to do after a new install:
+sudo apt update - updates all of the packages information for all of the repositories that the system knows about.
+sudo apt list --upgradeable - will show which packages that are installed on the system can be updated.
+sudo apt upgrade - updates all of the installed packages on the system.
+sudo reboot - restarts the system ( Recommended to do after using apt upgrade ).
+
 Users commands (For examples, refer to the file "user-commands.txt" which found inside the folder "users"):
 useradd - creates a new user.
 adduser - easier command than useradd.
