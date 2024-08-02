@@ -1,0 +1,40 @@
+In ubuntu you can create a new user by using the following command: useradd
+You can also use the following flags with the command to:
+1. useradd -d, which will specify where the user will be created.
+2. useradd -m, which will specify the name of the home directory of the user.
+
+Example of a full use of the command: sudo useradd -d /home/lior -m lior
+This will create a new user in the path /home/lior and the name of the home directory will be lior.
+
+After creating a new user, you have to give it a password before it can work.
+To create/change a password of a user, you have to use the following command: passwd *name of user*.
+Example: sudo passwd lior
+
+There is another command to create a new user, that is easier and more "automatic" than useradd.
+The command is: adduser *name of user*
+Example: sudo adduser lior
+After using the command, Ubuntu will create a group and a home directory for the user. It will also ask for you to create a password for the user. The command will also automatically create the user in bash.
+
+You can also add your newely created account to different groups or the administrator group ( sudo ) of your ubuntu by using the following command: usermod. You also need to add the flag -a -G.
+Example: sudo usermod -a -G sudo lior
+The command will add the user lior to the sudo group.
+To check if your user has been added to the sudo group, use the following command: cat /etc/group | grep *name of user*
+Or if you want to check all of the users in your system, You can just use: cat /etc/group
+
+If you want to delete any user including all of its files, use the command: userdel *name of user*
+Alternativity, You can also use the following command instead: deluser *name of user*
+deluser has less options than userdel and therefor you have less control on what you can delete with the user.
+Example: sudo userdel -f -r lior
+Will delete the user lior and all of the files associated to the user.
+Example: sudo deluser lior
+Will only delete the user.
+
+There is also an option to delete a user while also backuping the files associated to the user. This is possible by using the command deluser with the following flags: --remove-all-files --backup --backup-to /*destination*/
+Example: sudo deluser --remove-all-files --backup --backup-to /user-backups/
+
+More important commands that you should know that are related to users:
+whoami - will show you which user you are currently signed in to.
+sudo su *name of user* - will switch you to the chosen account.
+groups - will show which groups the user is part of.
+usermod -L *name of user* - will lock the selected user.
+usermod -U *name of user* - will unlock the selected user.
