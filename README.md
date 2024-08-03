@@ -7,3 +7,5 @@ In the linux-server folder, you can find an example of a basic VM with Ubuntu in
 In the users folder, you can learn the purpose of users in Ubuntu, how to create them, and how to add or remove them from different groups that are present on the system.
 
 This repository will be updated weekly with new subjects and summaries that are related to DevOps.
+
+![alt text](https://media.licdn.com/dms/image/D5612AQGPiLwBa4Fe9A/article-cover_image-shrink_600_2000/0/1690634415110?e=2147483647&v=beta&t=qM8qSlpxAE0RfonXynfbwrVfBivc_PJjNlYRrD-pZn0)

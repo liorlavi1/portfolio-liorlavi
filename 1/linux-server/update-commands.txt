@@ -1,4 +1,0 @@
-sudo apt update - updates all of the packages information for all of the repositories that the system knows about.
-sudo apt list --upgradeable - will show which packages that are installed on the system can be updated.
-sudo apt upgrade - updates all of the installed packages on the system.
-sudo reboot - restarts the system ( Recommended to do after using apt upgrade ).
